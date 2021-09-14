@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #333;
+  border-radius: 20px;
+  color: black;
+  position: relative;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.icon {
+  z-index: 2;
+}
+
+.fill {
+  width: 120%;
+  height: 120%;
+  background-color: #333;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  transition: all 0.5s ease;
+}
+
+.button:hover .fill {
+  transform: translate(45px, -45px);
+}
+
+.button:hover .icon {
+  color: white;
+}
