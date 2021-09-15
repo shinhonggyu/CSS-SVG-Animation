@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+  text-shadow: -1px -1px 0 gray, 1px -1px 0 gray, -1px 1px 0 gray,
+    1px 1px 0 gray;
+  color: white;
+  position: relative;
+}
+
+h1::before {
+  content: 'loading...';
+  color: lightpink;
+  position: absolute;
+  width: 0%;
+  overflow: hidden;
+  animation: move 4s linear infinite;
+}
+
+@keyframes move {
+  to {
+    width: 100%;
+  }
+}

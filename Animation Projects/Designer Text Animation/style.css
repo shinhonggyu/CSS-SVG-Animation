@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: #333;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-top {
+  display: flex;
+  align-items: baseline;
+  position: relative;
+  overflow: hidden;
+}
+
+.row-top::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: gold;
+  animation: moveBox 2s cubic-bezier(0, 0.5, 0, 0.5) forwards;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 5px;
+  opacity: 0;
+  animation: moveText 2s ease 2s forwards;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: gold;
+  opacity: 0;
+  animation: moveDot 0.5s 2s forwards cubic-bezier(0.05, 0.81, 0.67, 1.55);
+}
+
+.row-bottom {
+  position: relative;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.row-bottom::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: tomato;
+  left: -100%;
+  animation: moveBox 2s 2s cubic-bezier(0, 0.5, 0, 0.5) forwards;
+}
+
+.desc {
+  color: lightgray;
+  font-weight: 100;
+  font-size: 15px;
+  opacity: 0;
+  animation: moveText 2s 4s ease forwards;
+}
+
+@keyframes moveBox {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes moveText {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveBox {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes moveDot {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: lightslategray;
+}
+
+h1 {
+  font-size: 100px;
+  font-weight: 800;
+  position: relative;
+  /* color: lightslategray; */
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
+    1px 1px 0 #ffffff;
+}
+
+h1::before {
+  content: 'WEB DESIGN';
+  color: cadetblue;
+  text-shadow: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  overflow: hidden;
+  border-right: 20px solid cadetblue;
+  white-space: nowrap;
+  /* background-color: coral; */
+  animation: move 3s linear infinite;
+}
+
+@keyframes move {
+  to {
+    width: 100%;
+  }
+}

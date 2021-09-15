@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+button {
+  border: none;
+  padding: 15px;
+  width: 200px;
+  font-size: 20px;
+  color: white;
+  position: relative;
+}
+
+.button-1 {
+  background-color: black;
+}
+
+.button-1::before {
+  content: 'JOKING';
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  background-color: purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.button-1::after {
+  content: "DON'T WORRY!";
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.button-1:hover.button-1::before {
+  animation: retrive 1s forwards;
+}
+
+.button-1:hover.button-1::after {
+  animation: retrive 1s 1s alternate infinite;
+}
+
+@keyframes retrive {
+  to {
+    height: 100%;
+  }
+}
