@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Roboto', sans-serif;
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
 }
 
 h1 {
@@ -19,7 +19,7 @@ h1 {
 }
 
 .text {
-  color: lightgray;
+  color: white;
   text-shadow: -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000,
     2px 2px 0 #000000;
 }
